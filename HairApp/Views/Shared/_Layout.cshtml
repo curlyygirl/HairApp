@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:pink">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("HairApp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Ankieta włosowa", "Hair_Quiz", "Home")</li>
+                    <li>@Html.ActionLink("Plan mycia włosów", "Washing_Schedule", "Home")</li>
+                    <li>@Html.ActionLink("Sprawdź skład", "CheckIngredients", "Home")</li>
+                    <li>@Html.ActionLink("Mój profil", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Zaloguj się / Zarejestruj się", "Index", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - HairApp</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
