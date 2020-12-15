@@ -18,8 +18,16 @@
                     <li>@Html.ActionLink("Ankieta włosowa", "Hair_Quiz", "Home")</li>
                     <li>@Html.ActionLink("Plan mycia włosów", "Washing_Schedule", "Home")</li>
                     <li>@Html.ActionLink("Sprawdź skład", "CheckIngredients", "Home")</li>
-                    <li>@Html.ActionLink("Mój profil", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Zaloguj się / Zarejestruj się", "Login", "Profile")</li>
+                    <li>@Html.ActionLink("Mój profil", "Index", "Profile")</li>
+                    @if (Session["idUser"] == null)
+                    {
+                        <li>@Html.ActionLink("Zaloguj się", "Login", "Profile")</li>
+                        <li>@Html.ActionLink("Zarejestruj się", "Register", "Profile")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Wyloguj się", "Logout", "Profile")</li>
+                    }
                 </ul>
             </div>
         </div>

@@ -180,6 +180,8 @@
     <Content Include="Views\Profile\Register.cshtml" />
     <Content Include="Views\Profile\Login.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\ChangePassword.cshtml" />
+    <Content Include="Views\Profile\_LayoutProfile.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

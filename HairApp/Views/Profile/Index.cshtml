@@ -1,6 +1,7 @@
-﻿@{
+﻿@model HairApp.Models.User
+@{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Profile/_LayoutProfile.cshtml";
 }
 <div class="row justify-content-md-start">
     <div class="col-md-4">
@@ -13,11 +14,9 @@
                 {
                     <p>Name: @Session["FullName"].ToString()</p>
                     <p>Email: @Session["Email"].ToString()</p>
-                    <a href="@Url.Action("Logout","Profile")" class="btn btn-warning">Logout</a>
                 }
             </div>
         </div>
-
     </div>
 </div>
 
