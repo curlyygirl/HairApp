@@ -1,0 +1,74 @@
+﻿@model HairApp.Models.Quiz
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Quiz</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Porosity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Porosity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thickness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thickness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Density)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Density)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dyed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dyed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destroyed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destroyed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Length)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id , idUser = Model.idUser })
+</p>

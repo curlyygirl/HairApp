@@ -129,7 +129,7 @@ namespace HairApp.Controllers
         {
             if (Session["idUser"] == null)
                 return RedirectToAction("Login");
-            var idUser = Int32.Parse(Session["idUser"].ToString());
+            var idUser = (int)Session["idUser"];
 
             var _user = _db.Users.Find(idUser);
 
