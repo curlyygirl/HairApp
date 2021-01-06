@@ -12,11 +12,13 @@ namespace HairApp.Models
         public DB_Entities() : base("DatabaseHairApp") { }
         public DbSet<User> Users { get; set; }
         public DbSet<Quiz> Quizzes { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Quiz>().ToTable("Quizzes");
+            modelBuilder.Entity<Ingredient>().ToTable("Ingredients");
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             base.OnModelCreating(modelBuilder);

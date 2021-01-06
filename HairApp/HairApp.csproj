@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\QuizController.cs" />
     <Compile Include="Global.asax.cs">
@@ -139,8 +140,13 @@
     <Compile Include="Migrations\202101061703055_first.designer.cs">
       <DependentUpon>202101061703055_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101062135222_ingredient.cs" />
+    <Compile Include="Migrations\202101062135222_ingredient.designer.cs">
+      <DependentUpon>202101062135222_ingredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DB_Entities.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,6 +208,10 @@
     <Content Include="Views\Shared\EditorTemplates\DensityDropDownList.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\LengthDropDownList.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DestroyedDropDownList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\IngredientTypeDropDownList.cshtml" />
+    <Content Include="Views\Ingredient\Create.cshtml" />
+    <Content Include="Views\Ingredient\Details.cshtml" />
+    <Content Include="Views\Ingredient\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -225,6 +235,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101061703055_first.resx">
       <DependentUpon>202101061703055_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101062135222_ingredient.resx">
+      <DependentUpon>202101062135222_ingredient.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
