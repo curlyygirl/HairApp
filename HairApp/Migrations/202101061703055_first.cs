@@ -21,7 +21,9 @@
                         Destroyed = c.String(),
                         Length = c.String(),
                     })
-                .PrimaryKey(t => t.id);
+                .PrimaryKey(t => t.id)
+                .ForeignKey("dbo.Users", t => t.idUser, cascadeDelete: true)
+                .Index(t => t.idUser);
             
             CreateTable(
                 "dbo.Users",
@@ -39,6 +41,8 @@
         
         public override void Down()
         {
+            DropForeignKey("dbo.Quizzes", "idUser", "dbo.Users");
+            DropIndex("dbo.Quizzes", new[] { "idUser" });
             DropTable("dbo.Users");
             DropTable("dbo.Quizzes");
         }

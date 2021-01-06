@@ -35,6 +35,9 @@ namespace HairApp.Controllers
         // GET: Quiz/Details/5
         public ActionResult Details(int? id)
         {
+            if (Session["idUser"] == null)
+                return RedirectToAction("Login");
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -50,6 +53,9 @@ namespace HairApp.Controllers
         // GET: Quiz/Create
         public ActionResult Create()
         {
+            if (Session["idUser"] == null)
+                return RedirectToAction("Login");
+
             return View();
         }
 
@@ -60,6 +66,9 @@ namespace HairApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,idUser,Type,Porosity,Thickness,Density,Dyed,Destroyed,Length")] Quiz quiz)
         {
+            if (Session["idUser"] == null)
+                return RedirectToAction("Login");
+
             if (ModelState.IsValid)
             {
                 quiz.idUser = (int)Session["idUser"];
@@ -74,6 +83,9 @@ namespace HairApp.Controllers
         // GET: QuizProba/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (Session["idUser"] == null)
+                return RedirectToAction("Login");
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -93,6 +105,9 @@ namespace HairApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,idUser,Type,Porosity,Thickness,Density,Dyed,Destroyed,Length")] Quiz quiz)
         {
+            if (Session["idUser"] == null)
+                return RedirectToAction("Login");
+
             if (ModelState.IsValid)
             {
                 db.Entry(quiz).State = EntityState.Modified;

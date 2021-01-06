@@ -56,6 +56,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -133,17 +135,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101041909083_first.cs" />
-    <Compile Include="Migrations\202101041909083_first.designer.cs">
-      <DependentUpon>202101041909083_first.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101041916336_Quiz_update1.cs" />
-    <Compile Include="Migrations\202101041916336_Quiz_update1.designer.cs">
-      <DependentUpon>202101041916336_Quiz_update1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101051726168_quiz_changes.cs" />
-    <Compile Include="Migrations\202101051726168_quiz_changes.designer.cs">
-      <DependentUpon>202101051726168_quiz_changes.cs</DependentUpon>
+    <Compile Include="Migrations\202101061703055_first.cs" />
+    <Compile Include="Migrations\202101061703055_first.designer.cs">
+      <DependentUpon>202101061703055_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DB_Entities.cs" />
@@ -223,18 +217,15 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101041909083_first.resx">
-      <DependentUpon>202101041909083_first.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101041916336_Quiz_update1.resx">
-      <DependentUpon>202101041916336_Quiz_update1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101051726168_quiz_changes.resx">
-      <DependentUpon>202101051726168_quiz_changes.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Views\Shared\DisplayTemplates\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Shared\DisplayTemplates\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101061703055_first.resx">
+      <DependentUpon>202101061703055_first.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

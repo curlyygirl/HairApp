@@ -12,7 +12,9 @@ namespace HairApp.Models
         [Key, Column(Order = 1)]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
+        [ForeignKey("User")]
         public int idUser { get; set; }
+        public User User { get; set; }
         [UIHint("TypeDropDownList")]
         public string Type { get; set; }
         [UIHint("PorosityDropDownList")]

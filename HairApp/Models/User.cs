@@ -36,5 +36,7 @@ namespace HairApp.Models
         {
             return this.FirstName + " " + this.LastName;
         }
+        
+        
     }
 }

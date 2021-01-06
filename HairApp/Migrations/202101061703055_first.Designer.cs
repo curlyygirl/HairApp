@@ -7,13 +7,13 @@ namespace HairApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class quiz_changes : IMigrationMetadata
+    public sealed partial class first : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(quiz_changes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(first));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101051726168_quiz_changes"; }
+            get { return "202101061703055_first"; }
         }
         
         string IMigrationMetadata.Source
