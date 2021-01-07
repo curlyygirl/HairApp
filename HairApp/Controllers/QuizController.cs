@@ -28,7 +28,6 @@ namespace HairApp.Controllers
                 return RedirectToAction("Create");
             else
                 return RedirectToAction("Details", new { id = quiz.id });
-            
                 
         }
 
@@ -116,33 +115,6 @@ namespace HairApp.Controllers
             }
             return View(quiz);
         }
-
-        // GET: Quiz/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Quiz quiz = db.Quizzes.Find(id);
-            if (quiz == null)
-            {
-                return HttpNotFound();
-            }
-            return View(quiz);
-        }
-
-        // POST: Quiz/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Quiz quiz = db.Quizzes.Find(id);
-            db.Quizzes.Remove(quiz);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
         
     }
 }

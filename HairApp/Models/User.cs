@@ -15,22 +15,24 @@ namespace HairApp.Models
         public int idUser { get; set; }
         [Required]
         [StringLength(50, MinimumLength = 3)]
+        [Display(Name = "Imię")]
         public string FirstName { get; set; }
         [Required]
         [StringLength(50, MinimumLength = 3)]
+        [Display(Name = "Nazwisko")]
         public string LastName { get; set; }
         [Required]
         [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
-
         [Required]
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$")]
-
+        [Display(Name = "Hasło")]
         public string Password { get; set; }
-
         [NotMapped]
         [Required]
         [System.ComponentModel.DataAnnotations.Compare("Password")]
+        [Display(Name = "Powtórz hasło")]
         public string ConfirmPassword { get; set; }
         public string FullName()
         {

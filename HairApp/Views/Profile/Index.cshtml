@@ -7,14 +7,21 @@
     <div class="col-md-4">
         <div class="card">
             <div class="card-header">
-                Wellcome
+                Witaj!
             </div>
             <div class="card-body">
+                <p>Twoje dane</p>
                 @if (Session["FullName"] != null)
                 {
-                    <p>Name: @Session["FullName"].ToString()</p>
-                    <p>Email: @Session["Email"].ToString()</p>
+                    <p>Imię i nazwisko: @Session["FullName"].ToString()</p>
+                    <p>E-mail: @Session["Email"].ToString()</p>
                 }
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    @Html.ActionLink("Zmień hasło", "ChangePassword", "Profile")
+
+                </div>
             </div>
         </div>
     </div>

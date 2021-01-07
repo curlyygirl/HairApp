@@ -14,9 +14,11 @@ namespace HairApp.Models
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         [Required]
+        [Display(Name="Nazwa")]
         public string Name { get; set; }
         [Required]
         [UIHint("IngredientTypeDropDownList")]
+        [Display(Name="Rodzaj")]
         public string Type { get; set; }
 
     }

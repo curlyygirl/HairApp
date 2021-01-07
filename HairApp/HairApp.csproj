@@ -208,10 +208,8 @@
     <Content Include="Views\Profile\ChangePassword.cshtml" />
     <Content Include="Views\Profile\_LayoutProfile.cshtml" />
     <Content Include="Views\Quiz\Create.cshtml" />
-    <Content Include="Views\Quiz\Delete.cshtml" />
     <Content Include="Views\Quiz\Details.cshtml" />
     <Content Include="Views\Quiz\Edit.cshtml" />
-    <Content Include="Views\Quiz\Index.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TypeDropDownList.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\PorosityDropDownList.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\ThicknessDropDownList.cshtml" />
