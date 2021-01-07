@@ -133,6 +133,7 @@
     <Compile Include="Controllers\IngredientController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\QuizController.cs" />
+    <Compile Include="Controllers\WashingScheduleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -144,11 +145,20 @@
     <Compile Include="Migrations\202101062135222_ingredient.designer.cs">
       <DependentUpon>202101062135222_ingredient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101070028382_Washes.cs" />
+    <Compile Include="Migrations\202101070028382_Washes.designer.cs">
+      <DependentUpon>202101070028382_Washes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101070229234_WashingSchedule.cs" />
+    <Compile Include="Migrations\202101070229234_WashingSchedule.designer.cs">
+      <DependentUpon>202101070229234_WashingSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DB_Entities.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Quiz.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Wash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +222,7 @@
     <Content Include="Views\Ingredient\Create.cshtml" />
     <Content Include="Views\Ingredient\Details.cshtml" />
     <Content Include="Views\Ingredient\Index.cshtml" />
+    <Content Include="Views\WashingSchedule\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -238,6 +249,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101062135222_ingredient.resx">
       <DependentUpon>202101062135222_ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101070028382_Washes.resx">
+      <DependentUpon>202101070028382_Washes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101070229234_WashingSchedule.resx">
+      <DependentUpon>202101070229234_WashingSchedule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

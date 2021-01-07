@@ -16,7 +16,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Ankieta włosowa", "Index", "Quiz")</li>
-                    <li>@Html.ActionLink("Plan mycia włosów", "Washing_Schedule", "Home")</li>
+                    <li>@Html.ActionLink("Plan mycia włosów", "Index" ,"WashingSchedule")</li>
                     <li>@Html.ActionLink("Sprawdź skład", "Index", "Ingredient")</li>
                     <li>@Html.ActionLink("Mój profil", "Index", "Profile")</li>
                     @if (Session["idUser"] == null)

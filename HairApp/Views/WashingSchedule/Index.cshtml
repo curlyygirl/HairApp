@@ -1,0 +1,45 @@
+﻿@model IEnumerable<HairApp.Models.Wash>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Plan mycia</h2>
+
+
+<table class="table">
+    <tr>
+        <td>
+        </td>
+        <td>
+            Odżywka
+        </td>
+        <td>
+            Szampon
+        </td>
+        <td>
+            Maska
+        </td>
+    </tr>
+    @{int i = 1; }
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+        Mycie nr @i @{i++; }
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.WashConditioner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shampoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HairMask)
+        </td>
+    </tr>
+    }
+        
+
+</table>
